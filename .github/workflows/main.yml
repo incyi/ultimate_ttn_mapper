@@ -34,6 +34,7 @@ jobs:
           - arduino-platform: "arduino:avr"
             fqbn: "arduino:avr:uno"
           - arduino-platform: "adafruit:samd"
+            source-path: "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
             fqbn: "adafruit:samd:adafruit_feather_m4"
 
     # This is the platform GitHub will use to run our workflow
