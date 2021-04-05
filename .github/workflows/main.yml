@@ -23,7 +23,8 @@ jobs:
         # The matrix will produce one job for each configuration
         # parameter of type arduino-platform, in this case a
         # total of 2.
-        arduino-platform: ["arduino:samd", "arduino:avr"]
+        arduino-platform: ["adafruit:samd"]
+        #, "arduino:avr"]
         # This is usually optional but we need to statically define the
         # FQBN of the boards we want to test for each platform. In the
         # future the CLI might automatically detect and download the core
@@ -32,10 +33,10 @@ jobs:
         include:
           # This works like this: when the platform is "arduino:samd", the
           # variable fqbn is set to "arduino:samd:nano_33_iot".
-          - arduino-platform: "arduino:samd"
-            fqbn: "arduino:samd:nano_33_iot"
-          - arduino-platform: "arduino:avr"
-            fqbn: "arduino:avr:uno"
+          #- arduino-platform: "arduino:samd"
+          #  fqbn: "arduino:samd:nano_33_iot"
+         # - arduino-platform: "arduino:avr"
+          #  fqbn: "arduino:avr:uno"
           - arduino-platform: "adafruit:samd"
             fqbn: "adafruit:samd:adafruit_feather_m4"
 
@@ -60,6 +61,17 @@ jobs:
           arduino-cli core update-index
           arduino-cli core install ${{ matrix.arduino-platform }}
 
+      # Get the required libraries
+      - name: Install libraries
+        run: |
+          arduino-cli lib install "MCCI LoRaWAN LMIC library"
+          arduino-cli lib install "Adafruit GFX library"
+          arduino-cli lib install "Adafruit SSD1306"
+          arduino-cli lib install "Adafruit NeoPixel"
+          arduino-cli lib install "Adafruit GPS Library"
+          arduino-cli lib install "Adafruit ZeroTimer Library"
+#          arduino-cli lib install "Adafruit Arduino Zero ASF Core Library"
+                    
       # Finally, we compile the sketch, using the FQBN that was set
       # in the build matrix.
       - name: Compile Sketch
