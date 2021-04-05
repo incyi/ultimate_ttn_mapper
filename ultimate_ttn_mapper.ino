@@ -6,7 +6,7 @@
  * This code runs on an Adafruit Feather M4 Express with: 
  * - Adafruit LoRa Featherwing
  * - Adafruit GPS FeatherWing
- * - status displayed on  OLED FeatherWing
+ * - status displayed on OLED FeatherWing
  *
  *******************************************************************************/
 
