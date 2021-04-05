@@ -9,7 +9,8 @@ before_install:
 install:
   #arduino boards
   - arduino-cli core update-index
-#  - arduino-cli core install arduino:avr
+  - arduino-cli core install arduino:samd
+  - arduino-cli core install adafruit:samd
   #arduino libraries
   - arduino-cli lib update-index
   - arduino-cli lib install "MCCI LoRaWAN LMIC library"
@@ -18,4 +19,3 @@ install:
 
 script:
   - arduino-cli compile -b adafruit:samd:adafruit_feather_m4 ultimate_ttn_mapper.ino
-  
