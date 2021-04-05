@@ -1,6 +1,6 @@
 /*
  * ttn_secrets.h - Store your keys here!
- * DO NOT PUSH TO GITHUB !
+ * DO NOT PUSH YOUR KEYS TO GITHUB !
  */
 
 // Device EUI
