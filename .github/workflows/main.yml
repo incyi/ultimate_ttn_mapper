@@ -64,8 +64,8 @@ jobs:
       - name: Install libraries
         run: |
           arduino-cli lib install "MCCI LoRaWAN LMIC library"
-          arduino-cli lib install "Adafruit SSD1306 library"
           arduino-cli lib install "Adafruit GFX library"
+          arduino-cli lib install "Adafruit SSD1306 library"
           arduino-cli lib install "Adafruit NeoPixel library"
           
       # Finally, we compile the sketch, using the FQBN that was set
