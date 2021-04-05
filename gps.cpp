@@ -1,11 +1,6 @@
 /*
  * gps.cpp - Handles Adafruit GPS FeatherWing
- *
- * The following libraries are used:
- *  Adafruit_GPS - https://github.com/adafruit/Adafruit_GPS
- *  Adafruit_ZeroTimer - https://github.com/adafruit/Adafruit_ZeroTimer
- *  Adafruit_ASFcore - https://github.com/adafruit/Adafruit_ASFcore
- *
+ * 
  */
 
 #include <Adafruit_ZeroTimer.h>

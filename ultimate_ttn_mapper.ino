@@ -20,11 +20,15 @@
  * Adafruit LoRa Radio FeatherWing RadioFruit http://adafru.it/3231
  * 
  * Used libraries:
- * Adafruit_SSD1306
+ * MCCI LoRaWAN LMIC
  * Adafruit_GFX
+ * Adafruit_SSD1306
  * Adafruit_NeoPixel
  * 
- * Used board support packages:
+ * Adafruit_GPS - https://github.com/adafruit/Adafruit_GPS
+ * Adafruit_ZeroTimer - https://github.com/adafruit/Adafruit_ZeroTimer
+ * Adafruit_ASFcore - https://github.com/adafruit/Adafruit_ASFcore
+ * 
  */
  
 #include <lmic.h>

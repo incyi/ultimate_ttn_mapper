@@ -21,4 +21,3 @@ extern void gps_init();
 const uint8_t timer_number = 3;
 
 #endif /* _gps_h */
-

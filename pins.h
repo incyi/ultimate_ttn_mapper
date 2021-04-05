@@ -3,6 +3,7 @@
   * IO Pin-out
   * ------------------ Bat, En, USB, 13, 12, 11,  10,  9,  6,  5, SCL, SDA
   * Rst, 3V, Aref, GND, A0, A1,  A2, A3, A4, A5, SCK, MO, MI, RX,  TX,  D4
+  * 
   */
 
 #define RFM95_DIO1    A0 // A0 // Radio FeatherWing pins for Cortex-M4

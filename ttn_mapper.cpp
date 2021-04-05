@@ -6,7 +6,7 @@
  * to update that file.
  *
  * Important: see "Pin mapping" below
- *
+ * 
  */
 
 #include <lmic.h>
