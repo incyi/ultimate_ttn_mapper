@@ -5,6 +5,9 @@ name: test
 # is pushed or a Pull Request is opened.
 on: [push, pull_request]
 
+env:
+  ARDUINO_BOARD_MANAGER_ADDITIONAL_URLS: "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
+
 # This is the list of jobs that will be run concurrently.
 # Since we use a build matrix, the actual number of jobs
 # started depends on how many configurations the matrix
@@ -34,7 +37,6 @@ jobs:
           - arduino-platform: "arduino:avr"
             fqbn: "arduino:avr:uno"
           - arduino-platform: "adafruit:samd"
-            source-path: "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
             fqbn: "adafruit:samd:adafruit_feather_m4"
 
     # This is the platform GitHub will use to run our workflow
