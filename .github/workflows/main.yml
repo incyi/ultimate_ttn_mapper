@@ -69,7 +69,7 @@ jobs:
           arduino-cli lib install "Adafruit NeoPixel"
           arduino-cli lib install "Adafruit GPS Library"
           arduino-cli lib install "Adafruit ZeroTimer Library"
-          arduino-cli lib install "Adafruit Arduino Zero ASF Core Library"
+#          arduino-cli lib install "Adafruit Arduino Zero ASF Core Library"
                     
       # Finally, we compile the sketch, using the FQBN that was set
       # in the build matrix.
